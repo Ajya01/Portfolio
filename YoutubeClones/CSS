@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube</title>
+  <style>
+    * { 
+        margin: 0; padding: 0; box-sizing: border-box; 
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #ffffff;
+      color: #0f0f0f;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #f9f9f9;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      position: fixed;
+      width: 100%;
+      height: 56px;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-section img {
+      height: 20px;
+    }
+
+    .search-bar {
+      display: flex;
+      flex: 1;
+      max-width: 500px;
+      margin: 0 40px;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 8px;
+      background: #fff;
+      border: 1px solid #ccc;
+      color: #000;
+      border-radius: 2px 0 0 2px;
+    }
+
+    .search-bar button {
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 8px 16px;
+      border-radius: 0 2px 2px 0;
+      color: #000;
+    }
+
+    .icons span {
+      margin-left: 16px;
+      font-size: 18px;
+    }
+
+    .container {
+      display: flex;
+      margin-top: 56px;
+    }
+
+    aside {
+      width: 230px;
+      background-color: #ffffff;
+      padding-top: 10px;
+      height: calc(100vh - 56px);
+      border-right: 1px solid #e0e0e0;
+      position: fixed;
+      overflow-y: auto;
+    }
+
+    .sidebar-item {
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 55px;
+    }
+
+    main {
+      margin-left: 230px;
+      padding: 20px;
+      flex: 1;
+    }
+
+    .category-bar {
+      display: flex;
+      gap: 10px;
+      padding: 10px 0;
+      margin-bottom: 20px;
+    }
+
+    .category {
+      background-color: #f0f0f0;
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .video-card img {
+      width: 100%;
+      height: 60%;
+      border-bottom: 1px solid #eee;
+    }
+
+    .video-info {
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-section">
+    <span>☰</span>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search">
+    <button>🔍</button>
+  </div>
+
+  <div class="icons">
+    <button style="height: 35px; width: 70px;"> + Create</button>
+    <span>🔔</span>
+    <span>👤</span>
+  </div>
+</header>
+
+<div class="container">
+  <aside>
+    <div class="sidebar-item">Home</div>
+    <div class="sidebar-item">Shorts</div>
+    <div class="sidebar-item">Subscriptions</div>
+
+    <hr style="border-color: white; margin: 10px 0;">
+
+    <p class="sidebar-item" style="font-size: larger; font-weight: bold;">You ></p>
+
+    <div class="sidebar-item">History</div>
+    <div class="sidebar-item">Playlists</div>
+    <div class="sidebar-item">Your Videos</div>
+    <div class="sidebar-item">Watch Later</div>
+    <div class="sidebar-item">Liked Videos</div>
+    <div class="sidebar-item">Downloads</div>
+    <div class="sidebar-item">Your clips</div>
+
+    <hr style="border-color: white; margin: 10px 0;">
+
+    <p class="sidebar-item" style="font-size: larger; font-weight: bold;">Subscriptions</p>
+
+  </aside>
+
+  <main>
+    <div class="category-bar">
+      <div class="category">All</div>
+      <div class="category">Pakistani dramas</div>
+      <div class="category">Music</div>
+      <div class="category">Gaming</div>
+      <div class="category">UI/UX</div>
+      <div class="category">Podcasts</div>
+      <div class="category">Graphic design</div>
+      <div class="category">Thrillers</div>
+      <div class="category">Murder mystery</div>
+      <div class="category">Baking</div>
+      <div class="category">Recently uploaded</div>
+    </div>
+
+    <div class="video-grid">
+
+      <div class="video-card">
+        <img src="https://i.ytimg.com/vi/IkyPXN9BtfU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCfHff9cmHcupjyRVJRPgoaIh94PA" height="100px" width="100px">
+        <h3>Meem Se Mohabbat - Last Episode 33 [CC] 10 Apr 2025 - foodpanda, Master Paints, Skin White - HUM TV</h3>
+        <p class="video-info">HUM TV</p>
+        <p class="video-info">27M views • 1 month ago</p>
+      </div>
+
+      <div class="video-card">
+        <img src="https://i.ytimg.com/vi/zIw5sJlnjcM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCN5T5ppAxZZYsfnMJSw6aUj33UGA">
+        <h3>Becoming the Best Version of Yourself | Lecture by Dr. Omar Suleiman</h3>
+        <p class="video-info">Yaqeen Institute</p>
+        <p class="video-info">821K views • 1 year ago</p>
+      </div>
+
+      <div class="video-card">
+        <img src="https://i.ytimg.com/vi/26Vd5awOVTg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA5EWggiXIxg95jDk7zUt0YbdexaA">
+        <h3>LEAKED | Short Film | Teaser</h3>
+        <p class="video-info">Youth Club</p>
+        <p class="video-info">242K views • 3 months ago</p>
+      </div>
+
+      <div class="video-card">
+        <img class="rounded" src="https://i.ytimg.com/vi/tvlE4rEVYcg/maxresdefault.jpg">
+        <h3>You Can't Always Guide Your Loved Ones - Nouman Ali Khan</h3>
+        <p class="video-info">Nouman Ali Khan</p>
+        <p class="video-info">46K views • 6 days ago</p>
+      </div>
+
+      <div class="video-card">
+        <img class="rounded" src="https://i.ytimg.com/vi/24SHwduy0JQ/maxresdefault.jpg">
+        <h3>ART STYLE?! Everything I wish I could tell my beginner self✨🤌</h3>
+        <p class="video-info">Sparkle Drawz</p>
+        <p class="video-info">56.6K views • 2 years ago</p>
+      </div>
+
+      <div class="video-card">
+        <img src="https://i.ytimg.com/vi/71hi9H6fZuc/maxresdefault.jpg">
+        <h3>Nasheed Ya Adheeman - Ahmed Bukhatir نشيد يا عظيما - أحمد بوخاطر - Arabic Music Video</h3>
+        <p class="video-info">Ahmed Bukhatir | احمد بوخاطر · </p>
+        <p class="video-info">84M views • 7 years ago</p>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
