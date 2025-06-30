@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="max-w-2xl ml-[350px] my-[20px] bg-white p-8 rounded-2xl shadow-md" id="createEvent">
+        <h2 class="text-2xl font-semibold mb-6">Create New Event</h2>
+        <div class="mb-4">
+          <label for="eventName" class="block mb-2 font-medium">Event Name</label>
+          <input type="text" id="eventName" placeholder="e.g. John's Birthday Party" class="w-full p-3 border border-gray-300 rounded-lg" />
+        </div>
+        <div class="mb-4">
+          <label for="eventDate" class="block mb-2 font-medium">Date</label>
+          <input type="date" id="eventDate" class="w-full p-3 border border-gray-300 rounded-lg" />
+        </div>
+        <div class="mb-4">
+          <label for="eventLocation" class="block mb-2 font-medium">Location</label>
+          <input type="text" id="eventLocation" placeholder="e.g. Central Park, NYC" class="w-full p-3 border border-gray-300 rounded-lg" />
+        </div>
+        <div class="mb-6">
+          <label for="eventDescription" class="block mb-2 font-medium">Description</label>
+          <textarea id="eventDescription" rows="4" placeholder="Details about the event..." class="w-full p-3 border border-gray-300 rounded-lg"></textarea>
+        </div>
+        <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Save Event</button>
+    </section>
+</body>
+</html>
